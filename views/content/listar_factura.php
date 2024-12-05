@@ -9,15 +9,15 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>  
+<body>
     <div class="w-100 bg-primary p-3 text-white fs-3">
-        GESTIÓN DE FACTURACIÓN 
+        GESTIÓN DE FACTURACIÓN
     </div>
     <div class="m-5">
         <div class="my-3">
             <a class="btn btn-primary" href="./registrar_factura.php">
 
-            Registrar factura
+                Registrar factura
             </a>
         </div>
 
@@ -56,7 +56,7 @@
 </script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../js/scripts.js"></script>
 <script src="../js/listar_factura.js"></script>
 

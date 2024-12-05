@@ -1,3 +1,4 @@
+// Formatea números en estilo de moneda COP
 function formatNumber(number) {
     return number.toLocaleString('es-CO', {
         style: 'currency',
@@ -5,6 +6,7 @@ function formatNumber(number) {
     });
 }
 
+// Muestra una alerta de confirmación antes de realizar una acción
 function alertConfirmation(fn) {
     Swal.fire({
         title: "¿Estas seguró de realizar esta accion?",
@@ -14,7 +16,7 @@ function alertConfirmation(fn) {
         denyButtonText: `Cancelar`
     }).then((result) => {
         if (result.isConfirmed) {
-            fn();
+            fn(); // Ejecuta la función pasada como parámetro si se confirma
         }
-    })
+    });
 }

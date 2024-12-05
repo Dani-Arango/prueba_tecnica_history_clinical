@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-light">
-    <div class="w-100 bg-primary p-3 text-white fs-3 text-center">
+    <div class="w-100 bg-primary p-3 text-white fs-3">
         CREAR FACTURA
     </div>
     <div class="m-5">
