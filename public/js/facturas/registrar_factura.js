@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Realiza una petición AJAX para obtener productos desde el controlador
     $.ajax({
-        url: "../../controllers/controlador_productos.php",
+        url: "../../controllers/productos_controller.php",
         type: "POST",
         data: {
             metodo: 'obtenerProductos'
@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     // Realiza una petición AJAX para obtener clientes desde el controlador
     $.ajax({
-        url: "../../controllers/controlador_clientes.php",
+        url: "../../controllers/clientes_controller.php",
         type: "POST",
         data: {
             metodo: 'obtenerClientes'
@@ -118,7 +118,7 @@ $(document).ready(function () {
         })
 
         $.ajax({
-            url: "../../controllers/controlador_facturas.php",
+            url: "../../controllers/facturas_controller.php",
             type: "POST",
             data: {
                 metodo: "registrarFactura",

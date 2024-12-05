@@ -3,7 +3,7 @@ $(document).ready(function () {
     function consultarFacturas() {
         $("#facturas-list tbody").html(''); // Limpia la tabla antes de llenarla
         $.ajax({
-            url: "../../controllers/controlador_facturas.php",
+            url: "../../controllers/facturas_controller.php",
             type: "POST",
             data: {
                 metodo: 'obtenerFacturas' // Método para obtener las facturas
@@ -13,6 +13,12 @@ $(document).ready(function () {
                 if (data.length > 0) {
                     // Genera las filas dinámicamente para cada factura
                     data.forEach(function (factura, index) {
+                        let btnAnular = `<button class="btn btn-warning btn-sm text-white anular" data-metodo="anularFactura" data-id="${factura.factura_id}">
+                                Anular
+                            </button>`;
+
+                        if (factura.estado == 'Anulado') btnAnular = '';
+
                         let facturaHTML = `
                     <tr>
                     <td>
@@ -34,9 +40,7 @@ $(document).ready(function () {
 <a class="btn btn-info btn-sm text-white detalles" href="detalle_factura.php?id=${factura.factura_id}">
     Detalles
 </a>
-<button class="btn btn-warning btn-sm text-white anular" data-metodo="anularFactura" data-id="${factura.factura_id}">
-    Anular
-</button>
+${btnAnular}
 <button class="btn btn-danger btn-sm eliminar" data-metodo="eliminarFactura" data-id="${factura.factura_id}">
     Eliminar
 </button>
@@ -65,7 +69,7 @@ $(document).ready(function () {
         alertConfirmation(() => {
             // Realiza una petición AJAX para anular o eliminar la factura según el método
             $.ajax({
-                url: "../../controllers/controlador_facturas.php",
+                url: "../../controllers/facturas_controller.php",
                 type: "POST",
                 data: {
                     metodo: $(this).data('metodo'), // Determina el método según el botón

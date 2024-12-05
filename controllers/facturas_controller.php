@@ -7,7 +7,7 @@ class ControladorFacturas
     public function __construct()
     {
         // Carga el modelo de factura y lo inicializa
-        require_once __DIR__ . "/../models/modelo_facturas.php";
+        require_once __DIR__ . "/../models/facturas_model.php";
         $this->facturaModel = new Factura();
     }
 

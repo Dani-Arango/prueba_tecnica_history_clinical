@@ -4,7 +4,7 @@ class ControladorClientes {
 
     public function __construct(){
         // Carga el modelo de clientes y lo inicializa
-        require_once __DIR__ . "/../models/modelo_clientes.php";   
+        require_once __DIR__ . "/../models/clientes_model.php";   
         $this->clienteModel = new Cliente();   
     }
 

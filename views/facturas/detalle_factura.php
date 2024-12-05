@@ -60,8 +60,8 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
-    <script src="../js/detalle_factura.js"></script>
+    <script src="../../public/js/scripts.js"></script>
+    <script src="../../public/js/facturas/detalle_factura.js"></script>
 </body>
 
 </html>

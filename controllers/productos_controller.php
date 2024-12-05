@@ -6,7 +6,7 @@ class ControladorProductos
     public function __construct()
     {
         // Carga el modelo de productos y lo inicializa
-        require_once __DIR__ . "/../models/modelo_productos.php";
+        require_once __DIR__ . "/../models/productos_model.php";
         $this->productoModel = new Producto();
     }
 

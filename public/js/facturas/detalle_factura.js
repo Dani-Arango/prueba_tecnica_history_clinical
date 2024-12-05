@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // Realiza una petición AJAX para consultar los detalles de la factura
     $.ajax({
-        url: "../../controllers/controlador_facturas.php", // URL del controlador
+        url: "../../controllers/facturas_controller.php", // URL del controlador
         type: "POST", // Tipo de petición
         data: {
             metodo: 'consultarFactura', // Método para consultar la factura
