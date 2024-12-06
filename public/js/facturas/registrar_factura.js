@@ -129,7 +129,7 @@ $(document).ready(function () {
             dataType: "json",
             success: function (data) {
                 // Muestra un mensaje de éxito y redirige a la lista de facturas
-                Swal.fire("Saved!", "", "Factura registrada correctamente").then((res) => {
+                Swal.fire("Factura registrada correctamente", "", "success").then((res) => {
                     window.location.href = 'listar_factura.php'
                 })
             },
