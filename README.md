@@ -38,13 +38,13 @@ Importa el archivo SQL del proyecto:
 
 Selecciona la base de datos creada.  
 
-Ve a la pestaña Importar.  
+Ve a la sección import.  
 
 Selecciona el archivo SQL ubicado en la carpeta del proyecto:
 
 ##### C:\xampp\htdocs/prueba_tecnica_history_clinical/database/facturacion.sql	
 
-Haz clic en Importar para cargar la base de datos.
+Haz clic en el boton import para cargar la base de datos.
 #### 4. Configurar el Archivo de Conexión
 Edita el archivo connection.php ubicado en la raíz del proyecto y ajusta las credenciales:
 ##### C:\xampp\htdocs/prueba_tecnica_history_clinical/database/connection.php
