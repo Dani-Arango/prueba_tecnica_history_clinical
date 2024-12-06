@@ -130,9 +130,20 @@ class Factura
     public function eliminarFactura($id)
     {
         try {
-            $query = "DELETE FROM facturas WHERE id = ?";
-            $stmt = $this->db->prepare($query);
-            return $stmt->execute([$id]); // Retorna verdadero si la eliminación es exitosa
+            // Eliminar primero los productos asociados a la factura
+            $query1 = "DELETE FROM facturas_productos WHERE id_factura = ?";
+            $stmt1 = $this->db->prepare($query1);
+            $result1 = $stmt1->execute([$id]); // Ejecutar la primera consulta
+
+            // Si la primera eliminación fue exitosa, proceder a eliminar la factura
+            if ($result1) {
+                $query2 = "DELETE FROM facturas WHERE id = ?";
+                $stmt2 = $this->db->prepare($query2);
+                $result2 = $stmt2->execute([$id]);
+                return $result2;
+            }
+
+            return false; // Si la primera eliminación falla, retornar falso
         } catch (\Throwable $th) {
             error_log($th->getMessage());
             return false; // Manejo genérico de errores
